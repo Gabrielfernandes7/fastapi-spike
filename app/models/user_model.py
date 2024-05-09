@@ -1,7 +1,6 @@
 from sqlalchemy import Column, Integer, String
-from database.connnection import Base, engine
+from ..database.connnection import Base, engine
 
-# Não instancio novamente o Base = declarative_base()
 class UserModel(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key = True, index = True)
