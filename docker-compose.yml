@@ -22,3 +22,10 @@ services:
             - 5050:80
         depends_on:
             - postgresql
+    
+    fastapi-app:
+        build: .
+        ports:
+            - "80:80"
+        depends_on:
+            - postgresql

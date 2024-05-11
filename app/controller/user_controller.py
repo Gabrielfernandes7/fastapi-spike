@@ -2,10 +2,8 @@ from fastapi import APIRouter, HTTPException
 
 from ..services.user_service import UserService
 
-
 user_router = APIRouter(prefix='/user')
 assets_router = APIRouter(prefix='/assets')
-
 
 @user_router.post('/create')
 async def user_create(user_input):
